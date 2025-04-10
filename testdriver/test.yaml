@@ -1,0 +1,360 @@
+version: 5.2.2
+session: 67f72a174ecb5833fb19cbe6
+steps:
+  - prompt: >-
+      focus chrome and visit {{WEBSITE_URL}}
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: >-
+      now login using {{TD_USERNAME}} with password
+      {{TD_PASSWORD}}
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Username
+        description: username input field
+        action: click
+      - command: type
+        text: ${TD_TEST_USERNAME}
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: ${TD_TEST_PASSWORD}
+      - command: hover-text
+        text: Log In
+        description: login button
+        action: click
+  - prompt: >-
+      if there is a page asking about registering a mobile phone, click "remind
+      me later"
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Remind Me Later
+        description: remind me later link on the mobile registration page
+        action: click
+  - prompt: if there are any popups asking about notifications click the X or 'block'
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Block
+        description: block button on the notification popup
+        action: click
+  - prompt: click the "Accounts" tab and then click 'New' to create an account
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Accounts
+        description: accounts tab in the navigation bar
+        action: click
+      - command: hover-text
+        text: New
+        description: new button to create an account
+        action: click
+  - prompt: >-
+      now fill in any required fields with data that makes sense for the new
+      account, scrolling as needed to find them and save the account
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Account Name
+        description: account name input field
+        action: click
+      - command: type
+        text: Test Account
+      - command: hover-text
+        text: Save
+        description: save button to save the account
+        action: click
+  - prompt: >-
+      now click the 'New' button to the right of "Contacts" then create a new
+      contact, adding a name and email address
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: New
+        description: new button next to Contacts section
+        action: click
+      - command: hover-text
+        text: First Name
+        description: first name input field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last Name
+        description: last name input field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email
+        description: email input field
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Save
+        description: save button to save the contact
+        action: click
+  - prompt: >-
+      now open the contact "John Doe" and find the email field, scrolling if
+      necessary. Add an email address
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: John Doe
+        description: contact name in the Contacts section
+        action: click
+      - command: scroll-until-text
+        text: Email
+        direction: down
+        method: keyboard
+      - command: hover-text
+        text: Email
+        description: email input field
+        action: click
+      - command: type
+        text: john.doe@example.com
+  - prompt: >-
+      find the email field within the "Edit John Doe" modal. Scroll slowly to
+      find it and enter an email address
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 100
+      - command: scroll
+        direction: down
+        method: keyboard
+        amount: 200
+      - command: type
+        text: john.doe@example.com
+  - prompt: save the contact
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Save
+        description: save button in the edit modal
+        action: click
+  - prompt: now create a new opportunity
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: New
+        description: new button next to Opportunities
+        action: click
+  - prompt: now create a new opportunity
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Opportunity Name
+        description: opportunity name input field
+        action: click
+      - command: type
+        text: New Business Deal
+      - command: hover-text
+        text: Amount
+        description: amount input field
+        action: click
+      - command: type
+        text: 50000
+      - command: hover-text
+        text: Save
+        description: save button in the new opportunity modal
+        action: click
+  - prompt: now create a new opportunity
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Close Date
+        description: close date input field
+        action: click
+      - command: type
+        text: 12/31/2024
+      - command: hover-text
+        text: Stage
+        description: stage dropdown
+        action: click
+      - command: type
+        text: Qualification
+      - command: press-keys
+        keys:
+          - enter
+      - command: hover-text
+        text: Save
+        description: save button in the new opportunity modal
+        action: click
+  - prompt: >-
+      click the Leads item. Create a new lead, filling in any info that is
+      required. Be creative
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: >-
+      click the Leads item. Create a new lead, filling in any info that is
+      required. Be creative
+    commands:
+      - command: hover-text
+        text: Leads
+        description: leads tab in the Salesforce navigation bar
+        action: click
+      - command: hover-text
+        text: New
+        description: new button to create a lead
+        action: click
+      - command: hover-text
+        text: First Name
+        description: first name input field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last Name
+        description: last name input field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Company
+        description: company input field
+        action: click
+      - command: type
+        text: Doe Enterprises
+      - command: hover-text
+        text: Save
+        description: save button to create the lead
+        action: click
+  - prompt: convert the lead
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Convert
+        description: convert button to convert the lead
+        action: click
+  - prompt: click 'select converted status'
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Select Converted Status
+        description: button to select the converted status
+        action: click
+  - prompt: now click convert
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Convert
+        description: convert button in the Convert Lead dialog
+        action: click
+  - prompt: close the lead convert modal
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-image
+        description: close button in the top right corner of the modal
+        action: click
+  - prompt: now visit reports. Click "New report"
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: New Report
+        description: button to create a new report
+        action: click
+  - prompt: click "New Report"
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: New Report
+        description: button to create a new report
+        action: click
+  - prompt: search report types for 'Opportunities'
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Search Report Types...
+        description: search input field for report types
+        action: click
+      - command: type
+        text: Opportunities
+  - prompt: click report type name opportunities, then click 'Start report'
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Opportunities
+        description: report type name opportunities
+        action: click
+      - command: scroll-until-text
+        text: Start Report
+        direction: down
+        method: keyboard
+      - command: hover-text
+        text: Start Report
+        description: button to start the report
+        action: click
+  - prompt: now click 'Filters'
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Filters
+        description: filters option next to outline in the Salesforce interface
+        action: click
+  - prompt: now select the opportunity status filter
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Opportunity Status
+        description: opportunity status filter in the filters section
+        action: click
+  - prompt: now select the opportunity status filter
+    commands:
+      - command: hover-text
+        text: Opportunity Status
+        description: opportunity status dropdown in the edit filter section
+        action: click
+      - command: hover-text
+        text: Closed Won
+        description: closed won option in the dropdown
+        action: click
+      - command: hover-text
+        text: Apply
+        description: apply button in the edit filter section
+        action: click
+  - prompt: now save & run the report
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Save & Run
+        description: save and run button in the report interface
+        action: click
+  - prompt: now save & run the report
+    commands:
+      - command: hover-text
+        text: Save
+        description: save button in the save report dialog
+        action: click
