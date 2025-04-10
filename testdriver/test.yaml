@@ -46,6 +46,14 @@ steps:
         text: Block
         description: block button on the notification popup
         action: click
+  - prompt: if there are any popups asking about saving password, dismiss or click 'never'
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Never
+        description: never button on the save password popup
+        action: click
   - prompt: click the "Accounts" tab and then click 'New' to create an account
     commands:
       - command: focus-application
