@@ -27,5 +27,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE_COLOR: "3"
           WEBSITE_URL: "https://orgfarm-0520944d45-dev-ed.develop.my.salesforce.com/" # Define the website URL here
-          TD_USERNAME: ${{secrets.TD_TEST_USERNAME}}
-          TD_PASSWOERD: ${{secrets.TD_TEST_PASSWORD}}
+          TD_TEST_USERNAME: ${{secrets.TD_TEST_USERNAME}}
+          TD_TEST_PASSWORD: ${{secrets.TD_TEST_PASSWORD}}
