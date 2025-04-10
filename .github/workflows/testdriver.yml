@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: testdriverai/action@main
         with:
+          version: "5.2.2"
           key: ${{secrets.TESTDRIVER_API_KEY}}
           prompt: |
             1. /run testdriver/test.yaml
