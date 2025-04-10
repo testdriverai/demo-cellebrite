@@ -7,7 +7,7 @@ steps:
       - command: focus-application
         name: Google Chrome
   - prompt: >-
-      now login using {{TD_USERNAME}} with password
+      now login using {{TD_TEST_USERNAME}} with password
       {{TD_PASSWORD}}
     commands:
       - command: focus-application
