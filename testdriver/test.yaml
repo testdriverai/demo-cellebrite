@@ -42,14 +42,6 @@ steps:
         text: Never
         description: never button on the save password popup
         action: click
-  - prompt: >-
-      if there is a page asking about registering a mobile phone, click "remind
-      me later"
-    commands:
-      - command: hover-text
-        text: Remind Me Later
-        description: remind me later link on the mobile registration page
-        action: click
   - prompt: click the "Accounts" tab and then click 'New' to create an account
     commands:
       - command: hover-text
