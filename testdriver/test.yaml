@@ -26,14 +26,6 @@ steps:
         text: Log In
         description: login button
         action: click
-  - prompt: >-
-      if there is a page asking about registering a mobile phone, click "remind
-      me later"
-    commands:
-      - command: hover-text
-        text: Remind Me Later
-        description: remind me later link on the mobile registration page
-        action: click
   - prompt: if there are any popups asking about notifications click the X or 'block'
     commands:
       - command: hover-text
@@ -49,6 +41,14 @@ steps:
       - command: hover-text
         text: Never
         description: never button on the save password popup
+        action: click
+  - prompt: >-
+      if there is a page asking about registering a mobile phone, click "remind
+      me later"
+    commands:
+      - command: hover-text
+        text: Remind Me Later
+        description: remind me later link on the mobile registration page
         action: click
   - prompt: click the "Accounts" tab and then click 'New' to create an account
     commands:
@@ -155,7 +155,7 @@ steps:
         description: close date input field
         action: click
       - command: type
-        text: 12/31/2024
+        text: 4/11/2025
       - command: hover-text
         text: Stage
         description: stage dropdown
