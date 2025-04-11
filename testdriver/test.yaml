@@ -27,7 +27,9 @@ steps:
         description: login button
         action: click
   - prompt: if there are any popups asking about notifications click the X or 'block'
-    commands:
+  command: if
+  condition: a popoup shows related to allowing notifications
+  then:
       - command: hover-text
         text: Block
         description: block button on the notification popup
@@ -37,7 +39,9 @@ steps:
         description: block button on the notification popup
         action: click
   - prompt: if there are any popups asking about saving password, dismiss or click 'never'
-    commands:
+  command: if
+  condition: there is a popup to save the username and password
+  then:
       - command: hover-text
         text: Never
         description: never button on the save password popup
@@ -67,7 +71,7 @@ steps:
         description: save button to save the account
         action: click
   - prompt: >-
-      now click the 'New' button to the right of "Contacts" then create a new
+      now click the 'New' button to the right of "Contacts" or use the Contact menu then create a new
       contact, adding a name and email address
     commands:
       - command: hover-text
