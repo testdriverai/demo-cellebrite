@@ -96,33 +96,13 @@ steps:
         text: Save
         description: save button to save the contact
         action: click
-  - prompt: >-
-      find the email field within the "Edit John Doe" modal. Scroll slowly to
-      find it and enter an email address
-    commands:
-      - command: scroll
-        direction: down
-        method: keyboard
-        amount: 100
-      - command: scroll
-        direction: down
-        method: keyboard
-        amount: 200
-      - command: type
-        text: john.doe@example.com
-  - prompt: save the contact
-    commands:
-      - command: hover-text
-        text: Save
-        description: save button in the edit modal
-        action: click
   - prompt: now create a new opportunity
     commands:
       - command: hover-text
         text: New
         description: new button next to Opportunities
         action: click
-  - prompt: now create a new opportunity
+  - prompt: add values to the opportunity
     commands:
       - command: hover-text
         text: Opportunity Name
@@ -140,8 +120,6 @@ steps:
         text: Save
         description: save button in the new opportunity modal
         action: click
-  - prompt: now create a new opportunity
-    commands:
       - command: hover-text
         text: Close Date
         description: close date input field
