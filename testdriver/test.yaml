@@ -26,7 +26,16 @@ steps:
         text: Log In
         description: login button
         action: click
-  - prompt: if there are any popups asking about notifications click the X or 'block'
+  - prompt: if there are any popups asking about saving password, dismiss or click 'never'
+    commands:
+      - command: if
+        condition: there is a popup to save the username and password
+        then:
+          - command: hover-text
+            text: Never
+            description: never button on the save password popup
+            action: click
+   - prompt: if there are any popups coming from Google Chrome asking about notifications click the 'X' or click 'block'
     commands:
       - command: if
         condition: a popoup shows related to allowing notifications
@@ -38,15 +47,6 @@ steps:
           - command: hover-text
             text: Block
             description: block button on the notification popup
-            action: click
-  - prompt: if there are any popups asking about saving password, dismiss or click 'never'
-    commands:
-      - command: if
-        condition: there is a popup to save the username and password
-        then:
-          - command: hover-text
-            text: Never
-            description: never button on the save password popup
             action: click
   - prompt: click the "Accounts" tab and then click 'New' to create an account
     commands:
