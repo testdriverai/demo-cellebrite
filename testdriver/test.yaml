@@ -26,7 +26,8 @@ steps:
         text: Log In
         description: login button
         action: click
-  - prompt: if there are any popups asking about saving password, dismiss or click 'never'
+  - prompt: >- 
+      if there are any popups asking about saving password, dismiss or click 'never'
     commands:
       - command: if
         condition: there is a popup to save the username and password
@@ -35,7 +36,8 @@ steps:
             text: Never
             description: never button on the save password popup
             action: click
-   - prompt: if there are any popups coming from Google Chrome asking about notifications click the 'X' or click 'block'
+  - prompt: >-
+      if there are any popups coming from Google Chrome asking about notifications click the 'X' or click 'block'
     commands:
       - command: if
         condition: a popoup shows related to allowing notifications
@@ -48,7 +50,8 @@ steps:
             text: Block
             description: block button on the notification popup
             action: click
-  - prompt: click the "Accounts" tab and then click 'New' to create an account
+  - prompt: >- 
+       click the "Accounts" tab and then click 'New' to create an account
     commands:
       - command: hover-text
         text: Accounts
@@ -62,16 +65,16 @@ steps:
       now fill in any required fields with data that makes sense for the new
       account, scrolling as needed to find them and save the account
     commands:
-      - command: hover-text
-        text: Account Name
-        description: account name input field
-        action: click
-      - command: type
-        text: Test Account
-      - command: hover-text
-        text: Save
-        description: save button to save the account
-        action: click
+        - command: hover-text
+          text: Account Name
+          description: account name input field
+          action: click
+        - command: type
+          text: Test Account
+        - command: hover-text
+          text: Save
+          description: save button to save the account
+          action: click
   - prompt: >-
       now click the 'New' button to the right of "Contacts" or use the Contact menu then create a new
       contact, adding a name and email address
@@ -102,13 +105,15 @@ steps:
         text: Save
         description: save button to save the contact
         action: click
-  - prompt: now create a new opportunity
+  - prompt: >-
+      now create a new opportunity
     commands:
       - command: hover-text
         text: New
         description: new button next to Opportunities
         action: click
-  - prompt: add values to the opportunity
+  - prompt: >-
+      add values to the opportunity
     commands:
       - command: hover-text
         text: Opportunity Name
@@ -149,10 +154,6 @@ steps:
       click the Leads item. Create a new lead, filling in any info that is
       required. Be creative
     commands:
-  - prompt: >-
-      click the Leads item. Create a new lead, filling in any info that is
-      required. Be creative
-    commands:
       - command: hover-text
         text: Leads
         description: leads tab in the Salesforce navigation bar
@@ -183,42 +184,49 @@ steps:
         text: Save
         description: save button to create the lead
         action: click
-  - prompt: convert the lead
+  - prompt: >-  
+      convert the lead
     commands:
       - command: hover-text
         text: Convert
         description: convert button to convert the lead
         action: click
-  - prompt: click 'select converted status'
+  - prompt: >-
+      click 'select converted status'
     commands:
       - command: hover-text
         text: Select Converted Status
         description: button to select the converted status
         action: click
-  - prompt: now click convert
+  - prompt: >-
+      now click convert
     commands:
       - command: hover-text
         text: Convert
         description: convert button in the Convert Lead dialog
         action: click
-  - prompt: close the lead convert modal
+  - prompt: >-
+      close the lead convert modal
     commands:
       - command: hover-image
         description: close button in the top right corner of the modal
         action: click
-  - prompt: now visit reports. Click "New report"
+  - prompt: >-
+      now visit reports. Click "New report"
     commands:
       - command: hover-text
         text: New Report
         description: button to create a new report
         action: click
-  - prompt: click "New Report"
+  - prompt: >-
+      click "New Report"
     commands:
       - command: hover-text
         text: New Report
         description: button to create a new report
         action: click
-  - prompt: search report types for 'Opportunities'
+  - prompt: >-
+      search report types for 'Opportunities'
     commands:
       - command: hover-text
         text: Search Report Types...
@@ -226,7 +234,8 @@ steps:
         action: click
       - command: type
         text: Opportunities
-  - prompt: click report type name opportunities, then click 'Start report'
+  - prompt: >-
+      click report type name opportunities, then click 'Start report'
     commands:
       - command: hover-text
         text: Opportunities
@@ -240,19 +249,22 @@ steps:
         text: Start Report
         description: button to start the report
         action: click
-  - prompt: now click 'Filters'
+  - prompt: >-
+      now click 'Filters'
     commands:
       - command: hover-text
         text: Filters
         description: filters option next to outline in the Salesforce interface
         action: click
-  - prompt: now select the opportunity status filter
+  - prompt: >-
+      now select the opportunity status filter
     commands:
       - command: hover-text
         text: Opportunity Status
         description: opportunity status filter in the filters section
         action: click
-  - prompt: now select the opportunity status filter
+  - prompt: >-
+      now select the opportunity status filter
     commands:
       - command: hover-text
         text: Opportunity Status
@@ -266,13 +278,15 @@ steps:
         text: Apply
         description: apply button in the edit filter section
         action: click
-  - prompt: now save & run the report
+  - prompt: >-
+      now save & run the report
     commands:
       - command: hover-text
         text: Save & Run
         description: save and run button in the report interface
         action: click
-  - prompt: now save & run the report
+  - prompt: >-
+      now save & run the report
     commands:
       - command: hover-text
         text: Save
