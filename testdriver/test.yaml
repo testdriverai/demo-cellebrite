@@ -26,16 +26,12 @@ steps:
         text: Log In
         description: login button
         action: click
-  - prompt: >- 
-      if there are any popups asking about saving password, dismiss or click 'never'
+  - prompt: in the save password prompt click Save
     commands:
-      - command: if
-        condition: there is a popup to save the username and password
-        then:
-          - command: hover-text
-            text: Never
-            description: never button on the save password popup
-            action: click
+      - command: hover-text
+        text: Save
+        description: Save button in the save password prompt
+        action: click
   - prompt: >-
       if there are any popups coming from Google Chrome asking about notifications click the 'X' or click 'block'
     commands:
