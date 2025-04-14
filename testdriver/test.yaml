@@ -235,7 +235,7 @@ steps:
     commands:
       - command: hover-text
         text: Opportunities
-        description: 'Opportunities' directly under Report Type Name
+        description: Opportunities directly under Report Type Name
         action: click
       - command: scroll-until-text
         text: Start Report
