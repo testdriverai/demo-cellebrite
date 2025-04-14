@@ -26,6 +26,10 @@ steps:
         text: Log In
         description: login button
         action: click
+  - prompt: wait 7 seconds
+    commands:
+      - command: wait
+        timeout: 7000
   - prompt: in the save password prompt click Save
     commands:
       - command: hover-text
