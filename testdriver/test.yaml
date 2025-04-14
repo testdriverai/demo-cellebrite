@@ -46,10 +46,6 @@ steps:
             text: Block
             description: block button on the notification popup
             action: click
-          - command: hover-text
-            text: Block
-            description: block button on the notification popup
-            action: click
   - prompt: >- 
        click the "Accounts" tab and then click 'New' to create an account
     commands:
