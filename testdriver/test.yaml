@@ -63,7 +63,7 @@ steps:
     commands:
         - command: hover-text
           text: Account Name
-          description: account name input field
+          description: account name input field in the new account dialog
           action: click
         - command: type
           text: Test Account
